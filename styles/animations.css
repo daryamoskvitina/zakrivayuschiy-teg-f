@@ -12,3 +12,35 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+
+@keyframes arrow-animation {
+  from {
+   transform: translateX(0) translateY(-50%);
+  }
+  to {
+   transform: translateX(4px) translateY(-50%);
+  }
+ }
+
+
+@keyframes scaleHeart {
+  0% {
+   transform: scale(1);
+ }
+  50% {
+   transform: scale(1.5);
+  }
+  100% {
+   transform: scale(1);
+  }
+}
+
+@keyframes sparksAnimation {
+  0% {
+   opacity: 1;
+  }
+  100% {
+   opacity: 0;
+  }
+}
