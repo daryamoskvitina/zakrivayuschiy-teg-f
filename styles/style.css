@@ -21,7 +21,6 @@
   background-image: var(--bg-image);
   background-size: cover;
   background-attachment: fixed;
-  min-inline-size: 320px;
   min-block-size: 100dvb;
   min-inline-size: 375px;
   font-variation-settings: "wght" var(--main-font-weight);
@@ -283,7 +282,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: clamp(23.438rem, 8.929rem + 38.69vw, 43.75rem);
   width: clamp(19.375rem, 18.036rem + 3.571vw, 21.25rem);
   margin-inline: auto;
   margin-block-start: 50px;
@@ -333,6 +331,16 @@
   .floppy {
     transform: scale(0.75);
   }
+}
+
+@supports (-webkit-text-stroke: 1px) or (text-stroke: 1px) {
+  -webkit-text-stroke: 1px var(--bg-color);
+  text-stroke: 1px var(--bg-color);
+}
+
+@supports not ((-webkit-text-stroke: 1px) or (text-stroke: 1px)) {
+  text-shadow: 0 0 2px var(--bg-color), 0 0 2px var(--bg-color),
+    0 0 2px var(--bg-color), 0 0 2px var(--bg-color);
 }
 
 .sparks {
