@@ -448,6 +448,7 @@
   width: clamp(21.313rem, 20.598rem + 1.905vw, 22.313rem);
   padding-block: 30px;
   background-color: var(--bg-color);
+  border: 2px solid var(--accent-color);
 }
 
 .dialog::backdrop {
