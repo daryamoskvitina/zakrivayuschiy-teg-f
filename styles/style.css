@@ -571,5 +571,5 @@
 
 @supports not ((-webkit-text-stroke: 1px) or (text-stroke: 1px)) { 
   text-shadow: 0 0 2px var(--bg-color), 0 0 2px var(--bg-color), 
-    0 0 2px var(--bg-color), 0 0 2px var(--bg-color); 
+  0 0 2px var(--bg-color), 0 0 2px var(--bg-color); 
 } 
