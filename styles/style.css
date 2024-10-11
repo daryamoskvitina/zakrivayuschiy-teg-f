@@ -256,6 +256,12 @@
   color: var(--accent-color);
 }
 
+@media (prefers-color-scheme: dark) {
+  .theme-auto .button__text {
+    color: var(--accent-color);
+  }
+}
+
 .card__text-overlay {
   position: absolute;
   top: 27px;
@@ -310,6 +316,12 @@
 
 .theme-dark .floppy {
   color: var(--accent-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-auto .floppy {
+    color: var(--accent-color);
+  }
 }
 
 .button:focus {
