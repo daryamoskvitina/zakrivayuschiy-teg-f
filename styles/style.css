@@ -563,3 +563,13 @@
 .card__image-filter-saturate {
   filter: sepia(0.8) hue-rotate(45deg) saturate(1.5);
 }
+
+@supports (-webkit-text-stroke: 1px) or (text-stroke: 1px) { 
+  -webkit-text-stroke: 1px var(--bg-color); 
+  text-stroke: 1px var(--bg-color); 
+} 
+
+@supports not ((-webkit-text-stroke: 1px) or (text-stroke: 1px)) { 
+  text-shadow: 0 0 2px var(--bg-color), 0 0 2px var(--bg-color), 
+    0 0 2px var(--bg-color), 0 0 2px var(--bg-color); 
+} 
