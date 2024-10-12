@@ -300,7 +300,6 @@
   margin-inline: auto;
   margin-block-start: 2px;
   margin-block-end: 100px;
-  border: 2px solid var(--accent-color);
   color: var(--accent-color);
   background-color: var(--bg-color);
 }
@@ -311,11 +310,7 @@
   width: 100%;
   padding: 15px 20px;
   font-family: var(--accent-font,fantasy);
-}
-
-.save__button:focus {
-  box-shadow: 4px 4px 0 var(--accent-color);
-  outline: none;
+  border: 2px solid var(--accent-color);
 }
 
 .floppy {
@@ -573,18 +568,19 @@
 }
 
 @supports (-webkit-text-stroke: 1px) or (text-stroke: 1px) {
-  -webkit-text-stroke: 1px var(--bg-color);
   .text-overlay {
+    -webkit-text-stroke: 1px var(--bg-color);
     text-stroke: 1px var(--bg-color);
+    text-shadow: none;
   }
 }
  
  @supports not ((-webkit-text-stroke: 1px) or (text-stroke: 1px)) {
   .text-overlay {
-    text-shadow: 0 0 2px var(--bg-color),
-    0 0 2px var(--bg-color),
-    0 0 2px var(--bg-color),
-    0 0 2px var(--bg-color);
+    text-shadow: 1px 0px var(--bg-color),
+    -1px 0px var(--bg-color),
+    0px 1px var(--bg-color),
+    0px -1px var(--bg-color);
   }
 }
  
