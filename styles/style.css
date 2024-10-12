@@ -178,6 +178,7 @@
   font-weight: var(--accent-font-weight);
   font-size: var(--font-size-m);
   line-height: 21.78px;
+  font-variation-settings: 'wght' var(--accent-font-weight);
 }
 
 .card__paragraph {
@@ -221,6 +222,11 @@
   margin-block-start: 25px;
   margin-block-end: 25px;
   block-size: 38px;
+}
+
+.button:focus {
+  box-shadow: 2px 2px 0 var(--accent-color);
+  outline: none;
 }
 
 .card__like-button {
@@ -307,6 +313,11 @@
   font-family: var(--accent-font,fantasy);
 }
 
+.save__button:focus {
+  box-shadow: 4px 4px 0 var(--accent-color);
+  outline: none;
+}
+
 .floppy {
   position: relative;
   z-index: 1;
@@ -317,10 +328,7 @@
   mix-blend-mode: difference;
 }
 
-.button:focus {
-  box-shadow: 2px 2px 0 var(--accent-color);
-  outline: none;
-}
+
 
 @media (width >= 1440px) {
   .save__button {
@@ -566,13 +574,17 @@
 
 @supports (-webkit-text-stroke: 1px) or (text-stroke: 1px) {
   -webkit-text-stroke: 1px var(--bg-color);
-  text-stroke: 1px var(--bg-color);
- }
+  .text-overlay {
+    text-stroke: 1px var(--bg-color);
+  }
+}
  
  @supports not ((-webkit-text-stroke: 1px) or (text-stroke: 1px)) {
-  text-shadow: 0 0 2px var(--bg-color),
-   0 0 2px var(--bg-color),
-   0 0 2px var(--bg-color),
-   0 0 2px var(--bg-color);
- }
+  .text-overlay {
+    text-shadow: 0 0 2px var(--bg-color),
+    0 0 2px var(--bg-color),
+    0 0 2px var(--bg-color),
+    0 0 2px var(--bg-color);
+  }
+}
  
